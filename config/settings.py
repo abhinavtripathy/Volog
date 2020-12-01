@@ -144,7 +144,7 @@ LOGIN_REDIRECT_URL = '/app'
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'frontend/src/static'),
+    os.path.join(BASE_DIR, 'frontend', 'src', 'static'),
 )
 
 
@@ -152,6 +152,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 1000
 }
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'VologDrew@gmail.com'
